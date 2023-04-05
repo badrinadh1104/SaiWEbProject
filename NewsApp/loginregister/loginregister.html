@@ -1,0 +1,83 @@
+<!-- Login Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="loginregister.css">
+    <script src="https://kit.fontawesome.com/eca38bc02d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <nav>
+            <h1>ProjectName</h1>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <div class="wrapper">
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form name="loginform" class="loginform" onsubmit="return validation()">
+                    <div class=" input-box ">
+                        <span class=" icon "><i class=" fa-solid fa-envelope "></i></span>
+                        <input type=" email " name="email" id=" email " required
+                            title="Please enter a valid email address (e.g. example@example.com)">
+                        <label>Email</label>
+                        <small class="emailerror"></small>
+                    </div>
+                    <div class=" input-box ">
+                        <span class=" icon "><i class=" fa-solid fa-lock "></i></span>
+                        <input type=" password " name="password" id=" password " required>
+                        <label>Password</label>
+                        <small class="passworderror"></small>
+                    </div>
+                    <button type=" submit " class=" btn ">Login</button>
+                    <div class=" login-register ">
+                        <p>Don't have an account?<a href=" # " class=" register-link ">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class=" form-box register ">
+                <h2>Register</h2>
+                <form name="register" class="regform" onsubmit="return uregister()">
+                    <div class=" input-box ">
+                        <span class=" icon "><i class=" fa-solid fa-user "></i></span>
+                        <input type="text" name="rusername" required>
+                        <label>Username</label>
+                        <small class="Rusernameerror"></small>
+                    </div>
+                    <div class=" input-box ">
+                        <span class=" icon "><i class=" fa-solid fa-envelope "></i></span>
+                        <input type=" email " name="remail" required>
+                        <label>Email</label>
+                        <small class=" Remailerror "></small>
+                    </div>
+                    <div class=" input-box ">
+                        <span class=" icon "><i class=" fa-solid fa-lock "></i></span>
+                        <input type=" password " name="rpassword" required>
+                        <label>Password</label>
+                        <small class=" Rpassworderror "></small>
+                    </div>
+                    <button type="submit" class=" btn ">Register</button>
+                    <div class=" login-register ">
+                        <p>Already have an account?<a href=" # " class=" Login-link ">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src=" loginregister.js "></script>
+
+</body>
+
+</html>

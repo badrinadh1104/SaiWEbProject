@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('./images/indexpic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+nav h1 {
+    font-size: 4vh;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.8vh;
+    font-weight: 600;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
