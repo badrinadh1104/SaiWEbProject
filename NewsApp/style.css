@@ -5,7 +5,6 @@
 }
 
 body {
-    height: 100vh;
     background-image: linear-gradient(180deg, red, yellow);
 }
 
@@ -70,7 +69,32 @@ body {
 #sidebarMenu a :hover {
     margin: 0px;
     color: white;
-    padding: 5px 40px;
+    padding: 5px 60px;
     background-color: blue;
     border-radius: 20px;
+}
+
+.graphs {
+    overflow-y: scroll;
+    margin: 0;
+}
+
+.rows {
+    margin: 0;
+    background-color: lightcoral;
+    margin-bottom: 30px;
+    border: 2px solid greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.widget {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 15px;
+    width: 600px;
+    height: 500px;
+    /* border: 5px solid black; */
 }

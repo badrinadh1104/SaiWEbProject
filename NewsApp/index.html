@@ -29,6 +29,12 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -39,15 +45,15 @@
         <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse .bg-transparent">
             <div class="position-sticky">
                 <div class="list-group list-group-flush mx-3 mt-4">
-                    <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                    <a href="#chart1" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                         <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Chart1</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action py-2 ripple ">
+                    <a href="#chart2" class="list-group-item list-group-item-action py-2 ripple ">
                         <i class="fas fa-chart-area fa-fw me-3"></i><span>Chart2</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+                    <a href="#chart3" class="list-group-item list-group-item-action py-2 ripple"><i
                             class="fas fa-lock fa-fw me-3"></i><span>Chart3</span></a>
-                    <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+                    <a href="#chart4" class="list-group-item list-group-item-action py-2 ripple"><i
                             class="fas fa-chart-line fa-fw me-3"></i><span>Chart4</span></a>
 
                 </div>
@@ -56,7 +62,7 @@
         <!-- Sidebar -->
 
         <!-- Navbar -->
-        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-transparent navbar-fixed-top">
             <!-- Container wrapper -->
             <div class="container-fluid">
                 <!-- Toggle button -->
@@ -162,7 +168,7 @@
                                 <a class="dropdown-item" href="#">Settings</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="loginregister.html">Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -176,11 +182,181 @@
 
     <!--Main layout-->
     <main style="margin-top: 58px;">
-        <div class="container pt-4"></div>
+        <div class="container pt-4">
+            <div class="graphs">
+                <h1 style="text-align: center;">Chart1</h1>
+                <div class="rows" id="chart1">
+
+                    <div class="widget">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="widget">
+                        <table id="datatabel-example1">
+
+                            <thead>
+                                <tr role="row">
+                                    <th>Country</th>
+                                    <th>Hydro</th>
+                                    <th>oil</th>
+                                    <th>Coal</th>
+                                    <th>Nuclear</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <h1 style="text-align: center;">Chart2</h1>
+                <div class="rows" id="chart2">
+
+                    <div class="widget">
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                    <div class="widget">
+                        <table id="datatabel-example2">
+
+                            <thead>
+                                <tr role="row">
+                                    <th>Country</th>
+                                    <th>Hydro</th>
+                                    <th>oil</th>
+                                    <th>Coal</th>
+                                    <th>Nuclear</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <h1 style="text-align: center;">Chart3</h1>
+                <div class="rows" id="chart3">
+
+                    <div class="widget">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                    <div class="widget">
+                        <table id="datatabel-example3">
+
+                            <thead>
+                                <tr role="row">
+                                    <th>Country</th>
+                                    <th>Hydro</th>
+                                    <th>oil</th>
+                                    <th>Coal</th>
+                                    <th>Nuclear</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <h1 style="text-align: center;">Chart4</h1>
+                <div class="rows" id="chart4">
+                    <div class="widget">
+                        <canvas id="myChart4"></canvas>
+                    </div>
+                    <div class="widget">
+                        <table id="datatabel-example4">
+
+                            <thead>
+                                <tr role="row">
+                                    <th>Country</th>
+                                    <th>Hydro</th>
+                                    <th>oil</th>
+                                    <th>Coal</th>
+                                    <th>Nuclear</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!--Main layout-->
     <footer>
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+        <div class="container my-5">
 
+            <footer style="background-color:yellowgreen; margin-left: 120px;">
+                <div class="container p-4">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">shopping online</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">frequently asked questions</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">delivery</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">pricing</a>
+                                </li>
+                                <li>
+                                    <a href="#!" style="color: #4f4f4f;">where we deliver?</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">git cards</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">frequently asked questions</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">delivery and payment</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">activate the card</a>
+                                </li>
+                                <li>
+                                    <a href="#!" style="color: #4f4f4f;">rules</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">company</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">buy a gift card</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">history</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">return</a>
+                                </li>
+                                <li>
+                                    <a href="#!" style="color: #4f4f4f;">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">diamond club</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">registration</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">application</a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!" style="color: #4f4f4f;">about program</a>
+                                </li>
+                                <li>
+                                    <a href="#!" style="color: #4f4f4f;">rules</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2020 Copyright:
+                    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+
+        </div>
+        <!-- End of .container -->
     </footer>
     <!-- footer section end  -->
     <script src="script.js"></script>

@@ -19,7 +19,8 @@ function validation() {
     var emailcheck = /^[a-zA-Z0-9]+@gmail\.com$/
     var passcheck = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?]).{8,}$/;
     if (emailcheck.test(email)) {
-        document.querySelector(".emailerror").innerHTML = ""
+        document.querySelector(".emailerror").innerHTML = "";
+
     } else {
         console.log(emailcheck.test(email));
         document.querySelector(".emailerror").innerHTML = "*Email should contain @gmail.com";
@@ -27,9 +28,14 @@ function validation() {
     }
     if (passcheck.test(password)) {
         document.querySelector(".passworderror").innerHTML = ""
+
     } else {
         document.querySelector(".passworderror").innerHTML = "*minimum 8 characters, and must have a capital letter,number and special character"
         return false
+    }
+
+    if (emailcheck.test(email) && passcheck.test(password)) {
+        window.location.href = "index.html";
     }
     return returnval1;
 
@@ -76,7 +82,7 @@ function uregister() {
             body: JSON.stringify(data)
 
         }).then(res => res.json()).
-        then(data => console.log(data), window.location.href(" ")).
+        then(data => console.log(data)).
         catch(err => console.log(err));
 
     }
