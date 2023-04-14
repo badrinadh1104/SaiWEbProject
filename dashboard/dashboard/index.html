@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/jquery.slicknav.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#menu').slicknav({
+                label: '',
+                prependTo: '#responsive-menu'
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="full-wrapper">
+        <div class="sidebar">
+
+            <div id="responsive-menu">
+            </div>
+            <div class="head">
+                <img src="images/PYBr.gif" height="150px">
+            </div>
+            <ul id="menu">
+                <li>
+                    <a href="" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="">Users</a>
+                </li>
+                <li>
+                    <a href="">Projects</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <div class="user">
+                    <h2>Aftab Ahmed Mohammed</h2>
+                </div>
+            </div>
+            <div class="content">
+
+                <div class="page-title">
+                    <h1>Dashboard</h1>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="widget">
+                        <canvas id="pie"></canvas>
+                        <!-- <canvas id="triangle-chart"></canvas> -->
+                    </div>
+
+                    <div class="widget">
+                        <table id="datatabel-example1">
+
+                            <thead>
+                                <tr role="row">
+                                    <th>Name</th>
+                                    <th>Regular Hours</th>
+                                    <th>Overtime Hours</th>
+                                    <th>Vacation Hours</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+
+            </div>
+
+            <div class="footer">
+                Copyrights@Aftab
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+
+
+</body>
+
+</html>
