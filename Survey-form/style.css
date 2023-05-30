@@ -1,0 +1,181 @@
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-image: linear-gradient(180deg, #03045e, #0077b6);
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+} */
+
+.logo img {
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    object-fit: contain;
+    box-shadow: 10px 10px 12px 12px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 20px 0px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 8px 9px 8px 8px #03045e;
+}
+
+.footerText {
+    padding: 30px 10px;
+    background-color: #caf0f8;
+    color: black;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+    /* Add margin for spacing */
+    font-size: 12px;
+    /* Adjust font size as needed */
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 30px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea,
+    select {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    button[type="submit"],
+    button[type="reset"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

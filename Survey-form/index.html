@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><img src="https://cdn.pixabay.com/photo/2014/04/02/11/02/sneaker-305322__340.png" alt="">
+            </div>
+            <h1 class="title">PARAGON</h1>
+        </header>
+        <main>
+            <h2 class="subtitle">Survey Description</h2>
+            <p class="description">Please take a moment to fill out our survey to help us better understand your shoe
+                preferences and needs.</p>
+            <form id="surveyForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <div id="nameError" class="error-message"></div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div id="emailError" class="error-message"></div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                    <div id="ageError" class="error-message"></div>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div id="genderError" class="error-message"></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Shoe Preferences</legend>
+                    <label for="brand">Preferred Shoe Brand:</label>
+                    <input type="text" id="brand" name="brand" placeholder="Enter your preferred shoe brand" required>
+                    <div id="brandError" class="error-message"></div>
+                    <label for="size">Shoe Sizes Interested In:</label>
+                    <div id="sizeOptions">
+                        <!-- Shoe sizes checkboxes will be dynamically populated here using JavaScript -->
+                    </div>
+                    <label>How much do you agree with the following statement: "Comfort is the most important factor in
+                        choosing
+                        a pair of shoes."?</label>
+                    <div id="opinionOptions">
+                        <!-- Opinion options will be dynamically populated here using JavaScript -->
+                    </div>
+                    <div id="opinionError" class="error-message"></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Additional Comments</legend>
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" placeholder="Enter any additional comments"></textarea>
+                    <div id="commentsError" class="error-message"></div>
+                </fieldset>
+                <div class="buttons">
+                    <button type="reset" id="resetBtn">Reset</button>
+                    <button type="submit" id="submitBtn">Submit</button>
+                </div>
+            </form>
+            <!-- Success message box for form submission -->
+            <div id="successMessage" class="success-message"></div>
+
+        </main>
+        <footer>
+            <p class="footerText">Student Name: SAIKUMAR PULA | Student Number: [Your Student Number] | Email: [Your
+                Email]
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
